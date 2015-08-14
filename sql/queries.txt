@@ -1,0 +1,36 @@
+CREATE EXTERNAL TABLE solr (comments string, concept_definition string)
+      STORED BY 'com.lucidworks.hadoop.hive.LWStorageHandler'
+      TBLPROPERTIES('solr.server.url' = 'http://localhost:8983/solr',
+                    'solr.collection' = 'concepts_index',
+                    'solr.query' = '*:*');
+
+CREATE EXTERNAL TABLE solr (comments string, concept_definition string)
+      STORED BY 'com.lucidworks.hadoop.hive.LWStorageHandler'
+      TBLPROPERTIES('solr.server.url' = 'http://localhost:8983/solr',
+                    'solr.query' = '*:*');
+
+
+INSERT INTO TABLE solr SELECT comments, concept_definition  FROM concept_ha limit 5;
+
+hive -e 'SELECT comments, concept_definition FROM concept_ha limit 5' > /root/temp/temp.tsv
+
+
+CREATE EXTERNAL TABLE page_view(viewTime INT, userid BIGINT,
+     page_url STRING, referrer_url STRING,
+     ip STRING COMMENT 'IP Address of the User',
+     country STRING COMMENT 'country of origination')
+ COMMENT 'This is the staging page view table'
+ ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'
+ STORED AS TEXTFILE
+ LOCATION '/root/temp/temp.tsv';
+
+
+
+SELECT count(*) FROM concept_ha where comments is not NULL AND comments <> '' AND length(comments) > 0  ;
+
+SELECT ncid, concept_definition, cid FROM concept_ha limit 5;
+
+hive -e 'SELECT ncid, concept_definition, cid FROM concept_ha limit 5' > /root/temp/temp.tsv
+
+
+
