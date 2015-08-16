@@ -27,8 +27,8 @@ public class RestQueryManager {
         solr = new HttpSolrClient(urlString);
 
         SolrQuery solrQuery = new SolrQuery();
-        solrQuery.setQuery( "concept_definition_t:French" );
-        solrQuery.setFacet(false);
+        solrQuery.setQuery( "concept_definition_t:Newborn" );
+        solrQuery.setFacet(true);
         solrQuery.setHighlight(true).setHighlightSnippets(1);
 
         QueryResponse rsp=null;
@@ -40,8 +40,7 @@ public class RestQueryManager {
             while(iterDocs.hasNext())
             {
                 SolrDocument doc = iterDocs.next();
-                //docsDataArr = new ArrayList<String>();
-                System.out.println("ncid value for search term \'French\': " + doc.getFieldValue("ncid_s"));
+                System.out.println("ncid value for search term \'Newborn\': " + doc.getFieldValue("ncid_s"));
 
             }
 

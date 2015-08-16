@@ -1,5 +1,100 @@
-1.0	3M Health Information Systems	MMM-HEALTH-INFORMATION-SYSTEMS
+1.0 3M Health Information Systems	MMM-HEALTH-INFORMATION-SYSTEMS
 8.0	Language, Patient Qualitative	Language
-18.0	An ASN1Domain (1163):  A domain reference in ASN1 source file defined as ConceptStatus.	ConceptStatus
+18.0    An ASN1Domain (1163):  A domain reference in ASN1 source file defined as ConceptStatus.	ConceptStatus
 42.0	English	ENGLISH
 43.0	French	FRENCH
+44.0	German	GERMAN
+48.0	Portuguese	PORTUGUESE
+50.0	Spanish	SPANISH
+83.0	Lab category unassigned by LOINC	LabCategoryToBeDetermined
+85.0	Spiders	Spiders85
+112.0	Not Applicable	NOT-APPLICABLE
+129.0	Coding Method is a domain used in numerous applications within HEMSINFO	CodingMethod
+130.0	Human Language: An organized and accepted means of exchanging of ideas between humans.	HumanLanguage
+139.0	White	WHITE
+140.0	Black	BLACK
+143.0	American Indian or Alaskan	AMERICAN-INDIAN-OR-ALASKAN
+144.0	Other, Patient Qualitative	OTHER
+147.0	Assembly of God	ASSEMBLY-OF-GOD
+148.0	Baptist Church	BAPTIST
+150.0	Buddhism	BUDDHIST
+151.0	Catholicism	CATHOLIC
+152.0	Christianity	CHRISTIAN
+153.0	Christianity Reformed	CHRISTIAN-REFORMED
+154.0	Christian Science	CHRISTIAN-SCIENCE
+155.0	Church of Jesus Christ of Latter-day Saints	CHURCH-OF-JESUS-CHRIST-OF-LATT
+156.0	Church of Christ	CHURCH-OF-CHRIST
+157.0	Church of God	CHURCH-OF-GOD
+158.0	Church of God in Christ	CHURCH-OF-GOD-IN-CHRIST
+159.0	Church of God of Prophecy	CHURCH-OF-GOD-OF-PROPHECY
+160.0	Episcopalianism	EPISCOPAL
+161.0	Greek Orthodoxy	GREEK-ORTHODOX
+162.0	Judaism	JEWISH
+163.0	Lutheranism	LUTHERAN
+165.0	Mennonitism	MENNONITE
+166.0	Methodism	METHODIST
+167.0	Islam	MOSLEM
+168.0	Church of the Nazarene	NAZARENE
+169.0	Pentecostalism	PENTECOSTAL
+170.0	Protestantism	PROTESTANT
+171.0	Presbyterianism	PRESBYTERIAN
+172.0	Reorganized Church of Jesus Christ of Latter Day Saints	REORGANIZED-CHURCH-OF-JESUS-CH
+173.0	Salvation Army	SALVATION-ARMY
+174.0	Seventh-day Adventism	SEVENTH-DAY-ADVENTIST
+178.0	Eyes, Ear, Nose, Throat 	EYES-EAR-NOSE-THROAT
+181.0	Single	SINGLE
+182.0	Married	MARRIED
+183.0	Divorced	DIVORCED
+184.0	Widowed	WIDOWED
+185.0	Legally Separated	LEGALLY-SEPARATED
+189.0	Maiden Name	MaidenNameNameType
+190.0	Alias Name	AliasName1
+191.0	Preferred Name	PREFERRED-NAME
+199.0	Home Address	HOME-ADDRESS
+200.0	Work Address	WORK-ADDRESS
+201.0	Alternate Address	ALTERNATE-ADDRESS
+202.0	Previous Address	PREVIOUS-ADDRESS
+210.0	An ASN1Domain (1163):  A domain reference in ASN1 source file defined as Enterprise	Enterprise
+213.0	Child	CHILD
+217.0	CODING-METHOD	LOINC
+218.0	Private	PRIVATE-INSURANCE-TYPE
+219.0	Self-Pay	SELF-PAY-INSURANCE-TYPE
+220.0	Self Insured	SELF-INSURED
+223.0	LOINC Identifier context	LOINC-Code
+246.0	Race: A division of humankind that categorizes humans into distinct groups.  HL7Race value set.	Race
+247.0	Religion: The commitment to an organization of beliefs, rituals or an observation of specific practices as it relates to spirituality, morality or lifestyle philosophy.	Religion
+248.0	Marital Status: Legal standing of person in regard to his or her marriage state. (Mosby's Dental Dictionary, 2nd. Edition 2008 Elsevier, Inc.)	MaritalStatus
+249.0	Name Type: The words that refer to and  identify an individual.	NameType
+251.0	Address Type Domain	AddressType
+264.0	An ASN1Domain (1163):  A domain reference in ASN1 source file defined as TextReportType.	TextReportType
+307.0	Cardiac Catheterization Report	CARDIAC-CATH-REPORTS
+309.0	Autopsy - General Report	GENERAL-AUTOPSY-REPORT
+316.0	Jehovah's Witnesses	JEHOVAHS-WITNESS
+336.0	Infectious Disease	INFECTIOUS-DISEASE
+361.0	Temporary Address	TEMPORARY-ADDRESS
+362.0	Mailing Address	MAILING-ADDRESS
+363.0	Has Member	HAS-MEMBER
+364.0	Has Child	HAS-CHILD
+366.0	3M Default Schema	GLOBAL3M-SCHEMA
+367.0	CID Name (Context)	CIDNAME-CONTEXT
+370.0	Admission Class:  categorizes and identifies the patient type by site or location.	AdmissionClass
+371.0	Admission Type: This is the observed status or acuity of a patient for this admission. Includes HL7 Table 0007. This does not include the future physical location to which the patient is admitted or the clinical service examining the patient or the location from where the patient originated.	AdmissionType
+372.0	Hospital Service: Type of service, surgery or treatment the patient will receive; this is the specialty providing the service. This does not include locations or procedures.	HospitalService
+373.0	Discharge Disposition: Patient status, plan or destination at the point in time which the patient encounter is completed. This includes discharge, transfer or referral of care.	DischargeDisposition
+438.0	Geriatrics	GERIATRICS
+466.0	Sleep Disorders	SLEEP-DISORDERS
+488.0	Amish	AMISH
+490.0	Eastern Orthodoxy	EASTERN-ORTHODOX
+491.0	Hinduism	HINDU
+499.0	Emergency	EMERGENCY
+500.0	Inpatient	INPATIENT
+502.0	Preadmit	PREADMIT
+503.0	Recurring Patient	RECURRING-PATIENT
+504.0	Obstetrics	OBSTETRICS-ADMISSION-CLASS
+505.0	Home Health	HOME-HEALTH
+506.0	Accident Admission	ACCIDENT
+508.0	Labor and Delivery	LABOR-AND-DELIVERY
+509.0	Routine	ROUTINE-ADMISSION-TYPE
+510.0	Urgent	URGENT
+511.0	Elective	ELECTIVE
+512.0	Newborn	NEWBORN

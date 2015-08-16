@@ -26,11 +26,32 @@ CREATE EXTERNAL TABLE page_view(viewTime INT, userid BIGINT,
 
 
 
+SELECT count(*) FROM concept_ha;
+
 SELECT count(*) FROM concept_ha where comments is not NULL AND comments <> '' AND length(comments) > 0  ;
 
 SELECT ncid, concept_definition, cid FROM concept_ha limit 5;
 
 hive -e 'SELECT ncid, concept_definition, cid FROM concept_ha limit 5' > /root/temp/temp.tsv
+
+SELECT count(*) FROM concept_ha;
+
+SELECT count(*) FROM concept_ha where comments is not NULL AND comments <> '' AND length(comments) > 0  ;
+
+describe concept_ha;
+
+describe rsform_ha;
+
+SELECT * FROM concept_ha  where  concept_definition LIKE 'fre%';
+
+SELECT * FROM rsform_ha  where up_representation LIKE 'FRE%'  limit 5;
+
+SELECT concept_ha. concept_definition, rsform_ha.up_representation  FROM `concept_ha` INNER JOIN `rsform_ha` on  concept_ha. concept_definition LIKE 'fre%' and rsform_ha.up_representation LIKE 'FRE%'  limit 5;
+
+
+SELECT concept_ha. concept_definition, rsform_ha.up_representation  FROM `concept_ha` LEFT JOIN `rsform_ha` on  concept_ha. concept_definition LIKE 'fre%' and rsform_ha.up_representation LIKE 'FRE%' UNION  SELECT concept_ha. concept_definition, rsform_ha.up_representation  FROM `concept_ha` LEFT JOIN `rsform_ha` on  concept_ha. concept_definition LIKE 'fre%' and rsform_ha.up_representation LIKE 'FRE%' limit 5; 
+
+
 
 
 
