@@ -39,18 +39,17 @@ public class RestDocumentManager {
             System.out.println(docs.size());
 
             String urlString = String.format("%s%s",CONFIG.SOLR_HOST.getAttribute(), CONFIG.SOLR_HOST_INDEX.getAttribute());
-//            solr = new HttpSolrClient(urlString);
-//
-//            solr.add(docs);
-//            solr.commit();
+            solr = new HttpSolrClient(urlString);
+             solr.add(docs);
+             solr.commit();
 
             System.out.println("created this many docs on remote solr instance: "  +getNumSolrDocs());
 
 
         } catch (IOException e) {
             e.printStackTrace();
-//        } catch (SolrServerException e) {
-//            e.printStackTrace();
+        } catch (SolrServerException e) {
+            e.printStackTrace();
         }
 
     }
