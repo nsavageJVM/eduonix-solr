@@ -36,19 +36,21 @@ public class RestDocumentManager {
                 line = reader.readLine();
             }
 
-            String urlString = String.format("%s%s",CONFIG.SOLR_HOST.getAttribute(), CONFIG.SOLR_HOST_INDEX.getAttribute());
-            solr = new HttpSolrClient(urlString);
+            System.out.println(docs.size());
 
-            solr.add(docs);
-            solr.commit();
+            String urlString = String.format("%s%s",CONFIG.SOLR_HOST.getAttribute(), CONFIG.SOLR_HOST_INDEX.getAttribute());
+//            solr = new HttpSolrClient(urlString);
+//
+//            solr.add(docs);
+//            solr.commit();
 
             System.out.println("created this many docs on remote solr instance: "  +getNumSolrDocs());
 
 
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (SolrServerException e) {
-            e.printStackTrace();
+//        } catch (SolrServerException e) {
+//            e.printStackTrace();
         }
 
     }
@@ -60,9 +62,13 @@ public class RestDocumentManager {
 
         String[] tmp = line.split("\t");
         doc.addField("id", count++ );
+        System.out.println(tmp.length);
         doc.addField("ncid_s", tmp[0]);
         doc.addField("concept_definition_t", tmp[1]);
-        doc.addField("cid_t", tmp[2]);
+        if(tmp.length > 2) {
+            doc.addField("cid_t", tmp[2]);
+        }
+
 
         return doc;
 
